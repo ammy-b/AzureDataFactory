@@ -59,7 +59,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/ammyvijay.b@ubtiinc.com"
+							"notebookPath": "/Users/ammyvijay.b@ubtiinc.com/Sample"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",

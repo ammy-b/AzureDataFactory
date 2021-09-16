@@ -23,6 +23,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"batchName": {
+				"type": "string",
+				"defaultValue": "123"
+			}
+		},
 		"annotations": []
 	}
 }

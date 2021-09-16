@@ -1,0 +1,9 @@
+{
+	"name": "AmmyDataFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "06318a3b-f18f-4d81-9ea8-7d5eb98aae14",
+		"tenantId": "008502d6-3f79-46f0-ab37-9354e3fe80ff"
+	}
+}

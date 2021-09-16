@@ -59,7 +59,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/ammyvijay.b@ubtiinc.com/Sample"
+							"notebookPath": "/Shared/Sample CSV Gzip to Parquet to Azure SQL Server"
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricks1",

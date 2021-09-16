@@ -8,6 +8,9 @@
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},

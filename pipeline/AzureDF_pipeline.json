@@ -1,9 +1,9 @@
 {
-	"name": "pipeline1",
+	"name": "AzureDF_pipeline",
 	"properties": {
 		"activities": [
 			{
-				"name": "Notebook1",
+				"name": "ADF Databricks Notebook",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -13,7 +13,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/ammyvijay.b@ubtiinc.com"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []

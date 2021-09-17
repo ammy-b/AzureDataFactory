@@ -173,7 +173,7 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Azure Databricks connect with Blob Storage with ADF",
+						"name": "Parameter passing",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
 						"policy": {
@@ -204,6 +204,58 @@
 					"filename": {
 						"type": "string",
 						"defaultValue": "FB"
+					}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ADF_Databricks_Ex1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "AZ-Databricks connect with Blob Storage with ADF PPS",
+						"description": "Parameter Passing",
+						"type": "DatabricksNotebook",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/ammyvijay.b@ubtiinc.com/Azure Databricks connect with Blob Storage with ADF",
+							"baseParameters": {
+								"name": "@pipeline().parameters.Name",
+								"filename": "@pipeline().parameters.FileName"
+							}
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricks1",
+							"type": "LinkedServiceReference"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"parameters": {
+					"Name": {
+						"type": "string",
+						"defaultValue": "FB"
+					},
+					"FileName": {
+						"type": "string",
+						"defaultValue": "FB.csv.gz"
 					}
 				},
 				"annotations": []

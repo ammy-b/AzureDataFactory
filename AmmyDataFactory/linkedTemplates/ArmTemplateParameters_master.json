@@ -5,10 +5,10 @@
 		"factoryName": {
 			"value": "AmmyDataFactory"
 		},
-		"AzureDatabricks1_accessToken": {
+		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
-		"AzureBlobStorage1_connectionString": {
+		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
 		"containerUri": {

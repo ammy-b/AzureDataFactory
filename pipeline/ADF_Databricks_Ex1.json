@@ -1,9 +1,10 @@
 {
-	"name": "DataBricks_ADF_Example",
+	"name": "ADF_Databricks_Ex1",
 	"properties": {
 		"activities": [
 			{
-				"name": "Parameter passing",
+				"name": "AZ-Databricks connect with Blob Storage with ADF PPS",
+				"description": "Parameter Passing",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -15,9 +16,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/ammyvijay.b@ubtiinc.com/passing parameter",
+					"notebookPath": "/Users/ammyvijay.b@ubtiinc.com/Azure Databricks connect with Blob Storage with ADF",
 					"baseParameters": {
-						"input": "@pipeline().parameters.filename"
+						"name": "@pipeline().parameters.Name",
+						"filename": "@pipeline().parameters.FileName"
 					}
 				},
 				"linkedServiceName": {
@@ -27,9 +29,13 @@
 			}
 		],
 		"parameters": {
-			"filename": {
+			"Name": {
 				"type": "string",
 				"defaultValue": "FB"
+			},
+			"FileName": {
+				"type": "string",
+				"defaultValue": "FB.csv.gz"
 			}
 		},
 		"annotations": []
